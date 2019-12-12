@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贪吃蛇</title>
+    <script src="./js/Food.js"></script>
+    <script src="./js/Snake.js"></script>
+    <script src="./js/Game.js"></script>
+    <style>
+        .map {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="map"></div>
+    <script>
+        var map = document.querySelector(".map");
+        var fd = new Food(20, 20, "green");
+        var snake = new Snake(20, 20, "right");
+        var game = new Game(map, fd, snake);
+        game.init();
+        
+    </script>
+</body>
+</html>
